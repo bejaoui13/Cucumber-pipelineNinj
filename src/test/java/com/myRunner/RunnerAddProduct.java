@@ -13,7 +13,7 @@ import io.cucumber.testng.CucumberOptions;
         		  "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"},
           monochrome = true)
 
- 
+ //allure serve allure-results
  
  
  public class RunnerAddProduct extends AbstractTestNGCucumberTests {
