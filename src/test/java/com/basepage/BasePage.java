@@ -10,11 +10,10 @@ public class BasePage {
 	
 	public static WebDriver setDriver()
 	{
-		
-         driver = new ChromeDriver();
 		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/driver/chromedriver.exe");
 
-	System.getProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+		System.getProperty("webdriver.chrome.driver", "C:\\Users\\user\\eclipseworkspace\\ShopBDDweb\\driver\\chromedriver.exe");
+		
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.navigate().to("https://tutorialsninja.com/demo/index.php?route=account/login");

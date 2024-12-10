@@ -17,7 +17,7 @@ pipeline {
             steps {
                 script {
                 //    bat 'mvn clean test'
-                    bat 'mvn clean test -Dwebdriver.chrome.driver=driver/chromedriver.exe'
+                    bat 'mvn clean test -Dwebdriver.chrome.driver=C:\\Users\\user\\eclipseworkspace\\ShopBDDweb\\driver\\chromedriver.exe'
                     
                 }
             }
