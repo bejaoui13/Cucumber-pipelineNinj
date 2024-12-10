@@ -1,6 +1,6 @@
 package com.stepDefinition;
 
-import com.basepage.BaseTest;
+import com.basepage.BasePage;
 import com.pageobject.AddCardPage;
 import com.pageobject.LoginPage;
 
@@ -11,7 +11,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class AddCardSteps extends BaseTest {
+public class AddCardSteps extends BasePage {
 
 	LoginPage loginpage;
 	AddCardPage addproductcard;
@@ -19,7 +19,7 @@ public class AddCardSteps extends BaseTest {
 
 	@Given("User go to home page")
 	public void user_go_to_home_page() {
-		driver = BaseTest.setDriver();
+		driver = BasePage.setDriver();
 		addproductcard = new AddCardPage(driver);
 
 	}
@@ -45,7 +45,7 @@ public class AddCardSteps extends BaseTest {
 
 	@Given("User logged {string} and valid password {string}")
 	public void user_logged_and_valid_password(String email, String pwd) {
-		driver = BaseTest.setDriver();
+		driver = BasePage.setDriver();
 		loginpage = new LoginPage(driver);
 		addproductcard = new AddCardPage(driver);
 		loginpage.entercredential(email, pwd);

@@ -1,6 +1,6 @@
 package com.stepDefinition;
 
-import com.basepage.BaseTest;
+import com.basepage.BasePage;
 import com.pageobject.RegistrationPage;
 
 import org.junit.Assert;
@@ -11,14 +11,14 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Registration extends BaseTest{
+public class Registration extends BasePage{
 
 	WebDriver driver; 
 	  RegistrationPage registerpage; 
  
 	@Given("User open browser to register page")
 	public void user_open_browser_to_register_page() {
-		driver = BaseTest.setDriver();
+		driver = BasePage.setDriver();
 		registerpage =new RegistrationPage(driver);
 		registerpage.goPageRegiter();
 

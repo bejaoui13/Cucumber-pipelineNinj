@@ -22,6 +22,6 @@ import io.cucumber.junit.CucumberOptions;
  
 //public class RunnerAddProduct extends AbstractTestNGCucumberTests {
 
- public class RunnerAddProduct  {
+ public class TestRunnerAddProduct  {
 
 }

@@ -1,6 +1,6 @@
 package com.stepDefinition;
 
-import com.basepage.BaseTest;
+import com.basepage.BasePage;
 import com.pageobject.LoginPage;
 
 import org.junit.Assert;
@@ -10,14 +10,14 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class LoginSteps extends BaseTest {
+public class LoginSteps extends BasePage {
 
 	LoginPage loginpage;
 
 	@Given("User open browser")
 	public void user_open_browser() {
 
-		driver = BaseTest.setDriver();
+		driver = BasePage.setDriver();
 		loginpage = new LoginPage(driver);
 
 	}
