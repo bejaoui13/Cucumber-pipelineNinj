@@ -12,6 +12,13 @@
 			<version>4.13.2</version>
 			<scope>test</scope>
 		</dependency>
+
+
+		<dependency>
+			<groupId>org.apache.maven.surefire</groupId>
+			<artifactId>surefire-junit-platform</artifactId>
+			<version>3.0.0</version>
+		</dependency>
 		<!--
 		<dependency>
 			<groupId>org.testng</groupId>
