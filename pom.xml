@@ -12,14 +12,18 @@
 			<version>4.13.2</version>
 			<scope>test</scope>
 		</dependency>
-
-
+		<dependency>
+			<groupId>org.junit.platform</groupId>
+			<artifactId>junit-platform-suite</artifactId>
+			<version>1.9.3</version>
+			<scope>test</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.apache.maven.surefire</groupId>
 			<artifactId>surefire-junit-platform</artifactId>
 			<version>3.0.0</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-api</artifactId>
@@ -51,7 +55,7 @@
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
-			<version>7.9.0</version>  
+			<version>7.9.0</version>
 		</dependency>
 		<dependency>
 			<groupId>io.cucumber</groupId>
@@ -127,35 +131,35 @@
 		<pluginManagement>
 			<plugins>
 
-             <plugin>
-                   <groupId>org.apache.maven.plugins</groupId>
-                   <artifactId>maven-surefire-plugin</artifactId>
-                   <version>3.5.2</version>
-                   <configuration>
-                       <parallel>methods</parallel>
-                       <!-- <threadCount>3</threadCount>aynı anda 3 browser çalıştırılacağı anlamına gelir. -->
-                       <perCoreThreadCount>false</perCoreThreadCount>
-                       <forkCount>3</forkCount> <!-- 3 ayrı işlemi başlatır ve her biri farklı bir test paketi çalıştırır. Bu, testlerin daha hızlı tamamlanmasını sağlar. Ancak, bu ayarın artırılması, sistemin kaynaklarını tüketebilir ve performans sorunlarına neden olabilir. -->
-                        <!-- <reuseForks>true</reuseForks> Maven önceki testlerde oluşturulmuş işlemleri yeniden kullanır -->
-                       <includes>
-                             <include>com/myRunner/RunnerAddProduct.java</include>
-                       </includes>
-                       <testFailureIgnore>true</testFailureIgnore> <!--testin başarısız olmasına rağmen diğer testlere devam eder ve sonunda tüm testleri çalıştırır. -->
-                   </configuration>
-               </plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>3.5.2</version>
+					<configuration>
+						<parallel>methods</parallel>
+						<!-- <threadCount>3</threadCount>aynı anda 3 browser çalıştırılacağı anlamına gelir. -->
+						<perCoreThreadCount>false</perCoreThreadCount>
+						<forkCount>3</forkCount> <!-- 3 ayrı işlemi başlatır ve her biri farklı bir test paketi çalıştırır. Bu, testlerin daha hızlı tamamlanmasını sağlar. Ancak, bu ayarın artırılması, sistemin kaynaklarını tüketebilir ve performans sorunlarına neden olabilir. -->
+						<!-- <reuseForks>true</reuseForks> Maven önceki testlerde oluşturulmuş işlemleri yeniden kullanır -->
+						<includes>
+							<include>com/myRunner/RunnerAddProduct.java</include>
+						</includes>
+						<testFailureIgnore>true</testFailureIgnore> <!--testin başarısız olmasına rağmen diğer testlere devam eder ve sonunda tüm testleri çalıştırır. -->
+					</configuration>
+				</plugin>
 
 
-           <plugin>
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-compiler-plugin</artifactId>
-               <version>3.10.1</version>
-               <configuration>
-                   <source>17</source>
-                   <target>17</target>
-               </configuration>
-           </plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.10.1</version>
+					<configuration>
+						<source>17</source>
+						<target>17</target>
+					</configuration>
+				</plugin>
 
-				 
+
 				<plugin>
 					<artifactId>maven-clean-plugin</artifactId>
 					<version>3.4.0</version>
@@ -164,8 +168,6 @@
 					<artifactId>maven-resources-plugin</artifactId>
 					<version>3.3.1</version>
 				</plugin>
-
-
 
 
 				<!-- <plugin>
