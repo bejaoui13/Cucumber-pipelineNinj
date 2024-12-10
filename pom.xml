@@ -51,7 +51,7 @@
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
-			<version>7.9.0</version> <!-- Remplacez par la version que vous utilisez -->
+			<version>7.9.0</version>  
 		</dependency>
 		<dependency>
 			<groupId>io.cucumber</groupId>
@@ -164,6 +164,9 @@
 					<artifactId>maven-resources-plugin</artifactId>
 					<version>3.3.1</version>
 				</plugin>
+
+
+
 
 				<!-- <plugin>
 					<artifactId>maven-compiler-plugin</artifactId>
