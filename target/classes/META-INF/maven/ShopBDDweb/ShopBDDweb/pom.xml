@@ -12,6 +12,35 @@
 			<version>4.13.2</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.junit.platform</groupId>
+			<artifactId>junit-platform-suite</artifactId>
+			<version>1.9.3</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.maven.surefire</groupId>
+			<artifactId>surefire-junit-platform</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.11.3</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>5.11.3</version>
+			<scope>test</scope>
+		</dependency>
+<dependency>
+  <groupId>org.junit.vintage</groupId>
+  <artifactId>junit-vintage-engine</artifactId>
+  <version>5.7.0</version>
+</dependency>
 		<!--
 		<dependency>
 			<groupId>org.testng</groupId>
@@ -30,7 +59,7 @@
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
-			<version>7.9.0</version> <!-- Remplacez par la version que vous utilisez -->
+			<version>7.9.0</version>
 		</dependency>
 		<dependency>
 			<groupId>io.cucumber</groupId>
@@ -43,22 +72,6 @@
 			<artifactId>cucumber-junit</artifactId>
 			<version>7.9.0</version>
 		</dependency>
-
-
-		<dependency>
-			<groupId>org.junit.platform</groupId>
-			<artifactId>junit-platform-surefire-provider</artifactId>
-			<version>1.3.2</version>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-engine</artifactId>
-			<version>5.11.3</version>
-			<scope>test</scope>
-		</dependency>
-
 
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -125,8 +138,29 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
-					<version>2.19.1</version>
+					<version>3.5.2</version>
+					<configuration>
+					<!-- 	<parallel>methods</parallel>
+						<threadCount>3</threadCount>  
+						<perCoreThreadCount>false</perCoreThreadCount>
+						<forkCount>3</forkCount> 
+						 <reuseForks>true</reuseForks> 
+						<includes>
+							<include>com/myRunner/RunnerAddProduct.java</include>
+						</includes>
+						<testFailureIgnore>true</testFailureIgnore> -->
+					</configuration>
+				</plugin>
 
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.10.1</version>
+					<configuration>
+						<source>17</source>
+						<target>17</target>
+					</configuration>
 				</plugin>
 
 
@@ -139,14 +173,15 @@
 					<version>3.3.1</version>
 				</plugin>
 
-				<plugin>
+
+				<!-- <plugin>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.13.0</version>
-				</plugin>
+				</plugin>  
 				<plugin>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>3.3.0</version>
-				</plugin>
+				</plugin> -->
 				<plugin>
 					<artifactId>maven-jar-plugin</artifactId>
 					<version>3.4.2</version>
