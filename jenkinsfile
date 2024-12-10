@@ -1,28 +1,24 @@
 pipeline {
-
     agent any
-    tools {
-        maven '3.9.8' 
-    }
     stages {
-        stage('Compile stage') {
+        stage('Checking Maven Version') {
             steps {
-                bat "mvn clean compile" 
+                script {
+                    bat 'mvn -v'
+                }
+            }
+        }
+        stage('Repo Cloning') {
+            steps {
+                git branch: 'main', credentialsId: 'bejaoui13', url: 'https://github.com/bejaoui13/Cucumber-pipelineNinj.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                script {
+                    bat 'mvn clean test'
+                }
+            }
         }
     }
-
-         stage('testing stage') {
-             steps {
-                bat "mvn test"
-        }
-    }
-
-          stage('deployment stage') {
-              steps {
-                bat "mvn deploy"
-        }
-    }
-
-  }
-
 }
