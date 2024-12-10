@@ -3,6 +3,7 @@ package com.basepage;
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class BasePage {
 	
@@ -15,6 +16,10 @@ public class BasePage {
 		System.getProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
 		
 		driver = new ChromeDriver();
+		 ChromeOptions options = new ChromeOptions();
+	      options.setBinary("C:\\Users\\user\\eclipseworkspace\\ShopBDDweb\\driver\\chromedriver.exe"); 
+	      // Chemin de Chrome sur Jenkins
+	        
 		driver.manage().window().maximize();
 		driver.navigate().to("https://tutorialsninja.com/demo/index.php?route=account/login");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
