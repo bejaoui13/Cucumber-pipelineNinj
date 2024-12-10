@@ -13,7 +13,7 @@ pipeline {
                 git branch: 'main', credentialsId: 'bejaoui13', url: 'https://github.com/bejaoui13/Cucumber-pipelineNinj.git'
             }
         }
-        stage('Build') {
+        stage('Test build') {
             steps {
                 script {
                 //    bat 'mvn clean test'
@@ -23,14 +23,7 @@ pipeline {
             }
         }
         
-        
-         stage('Test') {
-            steps {
-                script {
-                    bat 'mvn test'
-                }
-            }
-        }
+         
         
     }
 }
