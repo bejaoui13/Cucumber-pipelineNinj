@@ -1,6 +1,6 @@
 package com.stepDefinition;
 
-import com.baseTest.BaseTest;
+import com.basepage.BaseTest;
 import com.pageobject.LoginPage;
 
 import org.junit.Assert;

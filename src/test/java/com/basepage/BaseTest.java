@@ -1,4 +1,4 @@
-package com.baseTest;
+package com.basepage;
 
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;

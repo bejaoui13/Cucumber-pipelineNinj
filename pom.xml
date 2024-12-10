@@ -136,11 +136,11 @@
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>3.5.2</version>
 					<configuration>
-						<parallel>methods</parallel>
-						<!-- <threadCount>3</threadCount>aynı anda 3 browser çalıştırılacağı anlamına gelir. -->
+					<!-- 	<parallel>methods</parallel>
+						<threadCount>3</threadCount>  
 						<perCoreThreadCount>false</perCoreThreadCount>
-						<forkCount>3</forkCount> <!-- 3 ayrı işlemi başlatır ve her biri farklı bir test paketi çalıştırır. Bu, testlerin daha hızlı tamamlanmasını sağlar. Ancak, bu ayarın artırılması, sistemin kaynaklarını tüketebilir ve performans sorunlarına neden olabilir. -->
-						<!-- <reuseForks>true</reuseForks> Maven önceki testlerde oluşturulmuş işlemleri yeniden kullanır -->
+						<forkCount>3</forkCount> 
+						 <reuseForks>true</reuseForks> Maven önceki testlerde oluşturulmuş işlemleri yeniden kullanır -->
 						<includes>
 							<include>com/myRunner/RunnerAddProduct.java</include>
 						</includes>

@@ -1,6 +1,6 @@
 package com.stepDefinition;
 
-import com.baseTest.BaseTest;
+import com.basepage.BaseTest;
 import com.pageobject.AddCardPage;
 import com.pageobject.LoginPage;
 
