@@ -3,7 +3,7 @@ package com.stepDefinition;
 import com.baseTest.BaseTest;
 import com.pageobject.LoginPage;
 
-import org.testng.Assert;
+import org.junit.Assert;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;

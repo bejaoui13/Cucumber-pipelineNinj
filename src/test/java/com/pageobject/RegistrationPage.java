@@ -4,8 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
-
+ 
 import io.cucumber.datatable.internal.difflib.myers.MyersDiff;
 
 public class RegistrationPage {
