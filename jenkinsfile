@@ -13,17 +13,24 @@ pipeline {
                 git branch: 'main', credentialsId: 'bejaoui13', url: 'https://github.com/bejaoui13/Cucumber-pipelineNinj.git'
             }
         }
-        stage('Test build') {
+        stage('Build') {
             steps {
                 script {
                 //    bat 'mvn clean test'
-                    bat 'mvn clean test -Dwebdriver.chrome.driver=C:\\Users\\user\\eclipseworkspace\\ShopBDDweb\\driver\\chromedriver.exe'
+                    bat 'mvn clean test -Dwebdriver.chrome.driver=./driver/chromedriver.exe'
                     
                 }
             }
         }
         
-         
+        
+         stage('Test') {
+            steps {
+                script {
+                    bat 'mvn test'
+                }
+            }
+        }
         
     }
 }

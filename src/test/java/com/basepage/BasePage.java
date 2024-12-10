@@ -12,7 +12,7 @@ public class BasePage {
 	{
 		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/driver/chromedriver.exe");
 
-		System.getProperty("webdriver.chrome.driver", "C:\\Users\\user\\eclipseworkspace\\ShopBDDweb\\driver\\chromedriver.exe");
+		System.getProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
 		
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
