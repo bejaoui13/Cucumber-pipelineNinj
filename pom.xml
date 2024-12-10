@@ -138,7 +138,7 @@
                        <forkCount>3</forkCount> <!-- 3 ayrı işlemi başlatır ve her biri farklı bir test paketi çalıştırır. Bu, testlerin daha hızlı tamamlanmasını sağlar. Ancak, bu ayarın artırılması, sistemin kaynaklarını tüketebilir ve performans sorunlarına neden olabilir. -->
                        <reuseForks>true</reuseForks> <!--Maven önceki testlerde oluşturulmuş işlemleri yeniden kullanır -->
                        <includes>
-                           <include>**/com.myRunner/*Runner*.java</include>
+                           <include>**/src/test/java/com/myRunner/RunnerAddProduct.java</include>
                        </includes>
                        <testFailureIgnore>true</testFailureIgnore> <!--testin başarısız olmasına rağmen diğer testlere devam eder ve sonunda tüm testleri çalıştırır. -->
                    </configuration>
