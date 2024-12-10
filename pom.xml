@@ -144,11 +144,11 @@
 						<threadCount>3</threadCount>  
 						<perCoreThreadCount>false</perCoreThreadCount>
 						<forkCount>3</forkCount> 
-						 <reuseForks>true</reuseForks> Maven önceki testlerde oluşturulmuş işlemleri yeniden kullanır -->
+						 <reuseForks>true</reuseForks> 
 						<includes>
 							<include>com/myRunner/RunnerAddProduct.java</include>
 						</includes>
-						<testFailureIgnore>true</testFailureIgnore> <!--testin başarısız olmasına rağmen diğer testlere devam eder ve sonunda tüm testleri çalıştırır. -->
+						<testFailureIgnore>true</testFailureIgnore> -->
 					</configuration>
 				</plugin>
 
