@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BasePage {
 	
 	public static WebDriver driver;
@@ -12,11 +14,12 @@ public class BasePage {
 	public static WebDriver setDriver()
 	{
 		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/driver/chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
 
-		System.getProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+		//System.getProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
 		
 		driver = new ChromeDriver();
-		 ChromeOptions options = new ChromeOptions();
+		  ChromeOptions options = new ChromeOptions();
 	      options.setBinary("C:\\Users\\user\\eclipseworkspace\\ShopBDDweb\\driver\\chromedriver.exe"); 
 	      // Chemin de Chrome sur Jenkins
 	        
