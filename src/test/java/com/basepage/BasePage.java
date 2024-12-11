@@ -13,13 +13,13 @@ public class BasePage {
 	{
 		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/driver/chromedriver.exe");
         //WebDriverManager.chromedriver().setup();
-
-		System.getProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+		// ChromeOptions options = new ChromeOptions();
+		   //   options.setBinary( "./driver/chromedriver.exe"); 
+	 	    //  options.addArguments("--headless");
+		System.getProperty("webdriver.chrome.driver", "./driv/chromedriver.exe");
 		
 		driver = new ChromeDriver();
-		 ChromeOptions options = new ChromeOptions();
-	      options.setBinary( "./driver/chromedriver.exe"); 
- 	      options.addArguments("--headless");
+   	        
 		driver.manage().window().maximize();
 		driver.navigate().to("https://tutorialsninja.com/demo/index.php?route=account/login");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
