@@ -12,12 +12,12 @@
 			<version>4.13.2</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
+		<!--<dependency>
 			<groupId>org.junit.platform</groupId>
 			<artifactId>junit-platform-suite</artifactId>
 			<version>1.9.3</version>
 			<scope>test</scope>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>org.apache.maven.surefire</groupId>
 			<artifactId>surefire-junit-platform</artifactId>
@@ -78,13 +78,13 @@
 			<artifactId>selenium-java</artifactId>
 			<version>4.24.0</version>
 		</dependency>
-
+<!-- 
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-devtools-v113</artifactId>
 			<version>4.9.1</version>
 		</dependency>
-
+-->
 		<dependency>
 
 			<groupId>io.github.bonigarcia</groupId>

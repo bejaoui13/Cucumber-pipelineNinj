@@ -18,9 +18,8 @@ public class BasePage {
 		
 		driver = new ChromeDriver();
 		 ChromeOptions options = new ChromeOptions();
-	      options.setBinary("C:\\Users\\user\\eclipseworkspace\\ShopBDDweb\\driver\\chromedriver.exe"); 
-	      // Chemin de Chrome sur Jenkins
-	        
+	      options.setBinary( "./driver/chromedriver.exe"); 
+ 	      options.addArguments("--headless");
 		driver.manage().window().maximize();
 		driver.navigate().to("https://tutorialsninja.com/demo/index.php?route=account/login");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
