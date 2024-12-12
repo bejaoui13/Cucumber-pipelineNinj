@@ -11,7 +11,7 @@ Feature: Check Feature Register User
 
     Examples: 
       |firstname |lastname |email  |telephone  |password |confpassword |  
-      |test |test |test120000@yopmail.com |99556633 |987654321S |987654321S | 
+      |test |test |test1257@yopmail.com |99556633 |987654321S |987654321S | 
       
       
       

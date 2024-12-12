@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		   features = "src/test/resources/features/01_Registration.feature", 
+		   features = "src/test/resources/features/03_AddCard.feature", 
           glue = "com.stepDefinition", 
  
           plugin = {"pretty",
