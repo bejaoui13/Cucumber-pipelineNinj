@@ -36,5 +36,25 @@ pipeline {
             }
         }
         
+                
+        stage('Generate Allure report') {
+            steps {
+                script {
+                    allure([
+                        includeProperties: false,
+                        jdk: '',
+                        properties: [],
+                        reportBuildPolicy: 'ALWAYS',
+                        report: 'allure-report',
+                        results: [[path: 'allure-results']],
+                    ])
+                }
+            }
+        }
+        
+        
+        
     }
+        
+   
 }
