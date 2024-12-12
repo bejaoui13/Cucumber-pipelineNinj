@@ -1,0 +1,10 @@
+com\pageobject\LoginPage.class
+com\TestRunner\RunnerRegister.class
+com\TestRunner\TestRunnerAddProduct.class
+com\basepage\BasePage.class
+com\pageobject\AddCardPage.class
+com\pageobject\RegistrationPage.class
+com\stepDefinition\AddCardSteps.class
+com\TestRunner\RunnerLogin.class
+com\stepDefinition\LoginSteps.class
+com\stepDefinition\Registration.class

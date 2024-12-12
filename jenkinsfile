@@ -19,7 +19,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    bat 'mvn clean test'
+                    bat 'mvn clean install -DsuiteXmlFile=TestRunnerAddProduct.java'
                    //  System.setProperty("webdriver.chrome.driver", env.CHROME_DRIVER_PATH)
                     
                   //  bat 'mvn clean test -Dwebdriver.chrome.driver=./driver/chromedriver.exe'
