@@ -16,6 +16,9 @@ public class BasePage {
 		// ChromeOptions options = new ChromeOptions();
 		   //   options.setBinary( "./driver/chromedriver.exe"); 
 	 	    //  options.addArguments("--headless");
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless"); // Remove or comment out this line
+		options.addArguments("--disable-gpu", "--window-size=1920,1200");
 		System.getProperty("webdriver.chrome.driver", "./driv/chromedriver.exe");
 		
 		driver = new ChromeDriver();
