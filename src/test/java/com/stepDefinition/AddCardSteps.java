@@ -90,14 +90,14 @@ public class AddCardSteps extends BasePage {
 	@Then("User have the price correct in the shoping card {string}")
 	public void user_have_price_correct_in_the_shoping_card(String qteexpected) throws InterruptedException {
 
-		float actualpricecard = Float.parseFloat(addproductcard.checkPrice());
+		//float actualpricecard = Float.parseFloat(addproductcard.checkPrice());
 
 		float floatqte = Float.parseFloat(qteexpected);
-		float expectedTotalpricecard = this.floatNumber * floatqte;
+		//float expectedTotalpricecard = this.floatNumber * floatqte;
 		//System.out.println("----" + this.floatNumber + "----" + floatqte + "----" + expectedTotalpricecard);
- 
+		 System.out.println("-----------" + addproductcard.checkQte()+ "----" + qteexpected);
 		//Assert.assertEquals(actualpricecard, expectedTotalpricecard, "Price incorrect");
-		Assert.assertEquals(addproductcard.checkQte(), qteexpected, "Qte incorrect");
+		Assert.assertEquals(addproductcard.checkQte(), qteexpected);
 
 		
  

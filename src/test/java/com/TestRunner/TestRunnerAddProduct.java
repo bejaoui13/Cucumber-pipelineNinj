@@ -9,13 +9,14 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		   features = "src/test/resources/features/Login.feature", 
+		   features = "src/test/resources/features/AddCard.feature", 
           glue = "com.stepDefinition", 
  
           plugin = {"pretty",
         		  "html:target/cucumber-reports/report.html",
         		  "json:target/cucumber.json",
-        		  "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"},
+        		//  "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
+        		  },
           monochrome = true)
 
  //allure serve allure-results

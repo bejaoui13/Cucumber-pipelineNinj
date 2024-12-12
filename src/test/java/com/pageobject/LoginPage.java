@@ -43,7 +43,7 @@ public class LoginPage {
 	{	
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(120));
  	 	 String msgerror =driver.findElement(msgerreur).getText();
-	 	 System.out.println("*********************" + msgerror);
+	 	 //System.out.println("*********************" + msgerror);
 
           return msgerror;
 	}

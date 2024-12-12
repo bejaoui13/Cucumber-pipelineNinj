@@ -67,7 +67,7 @@ public class RegistrationPage {
 	{
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(200));
 		
-		System.out.println("....................." +  driver.findElement(errorregister).getText());
+		//System.out.println("....................." +  driver.findElement(errorregister).getText());
 		return driver.findElement(errorregister).getText();
 		
 	}
