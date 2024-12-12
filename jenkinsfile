@@ -49,13 +49,15 @@ pipeline {
                         results: [[path: 'allure-results']],
                     ])
                 }
+                
+               
+                
             }
-        }
-        
-        
-        post {
-        success {
-            emailext(
+            
+             
+                 post {
+                  success {
+                    emailext(
                 subject: "Rapport Pipeline Completed",
                 body: "The Jenkins pipeline has completed.",
                 recipientProviders: [[$class: 'CulpritsRecipientProvider']],
@@ -64,6 +66,10 @@ pipeline {
             )
         }
     }
+        }
+        
+        
+       
         
         
     }
