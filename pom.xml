@@ -79,11 +79,13 @@
 			<version>4.25.0</version>
 		</dependency>
  
-		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-devtools-v113</artifactId>
-			<version>4.9.1</version>
-		</dependency>
+	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-devtools-v131 -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-devtools-v131</artifactId>
+    <version>4.27.0</version>
+</dependency>
+
 
 		<dependency>
 
