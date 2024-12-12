@@ -1,9 +1,7 @@
 pipeline {
     agent any
     
-    environment {
-         CHROME_DRIVER_PATH = 'C:\\Users\\user\\eclipseworkspace\\ShopBDDweb\\driver\\chromedriver.exe'   
-    }
+   // environment {       CHROME_DRIVER_PATH = 'C:\\Users\\user\\eclipseworkspace\\ShopBDDweb\\driver\\chromedriver.exe'    }
     
     stages {
         stage('Checking Maven Version') {
@@ -22,7 +20,7 @@ pipeline {
             steps {
                 script {
                     bat 'mvn clean test'
-                     System.setProperty("webdriver.chrome.driver", env.CHROME_DRIVER_PATH)
+                   //  System.setProperty("webdriver.chrome.driver", env.CHROME_DRIVER_PATH)
                     
                   //  bat 'mvn clean test -Dwebdriver.chrome.driver=./driver/chromedriver.exe'
                     
@@ -30,14 +28,7 @@ pipeline {
             }
         }
         
-        
-         stage('Test') {
-            steps {
-                script {
-                    bat 'mvn test'
-                }
-            }
-        }
+      
         
     }
 }
